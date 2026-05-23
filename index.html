@@ -385,10 +385,10 @@
       <div class="modal-title" id="modalTitle"></div>
       <div class="modal-desc" id="modalDesc"></div>
       <div class="modal-actions">
-        <button class="btn-neon" id="modalDLBtn" onclick="doModalDownload()">
+        <!-- <button class="btn-neon" id="modalDLBtn" onclick="doModalDownload()">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M8 1v10M4 7l4 4 4-4M2 13h12"/></svg>
           Download File
-        </button>
+        </button> -->
         <button class="btn-outline" onclick="closeModal()">Close</button>
       </div>
     </div>
@@ -416,6 +416,7 @@ const IMAGES = {
   project12_img: "images/ព្រះវស្សា2.png",
   project13_img: "images/មាឃបូជា.png",
     project14_img: "images/៧​កក្ដដា1.png",
+    project15_img: "images/ច្រត់នង្គ័រ.png",
   // project1_psd: "8 women.psd",
   // project2_psd: "ចម្រើន​ព្រះ​ជន្ម.psd",
   //   project3_psd: "blue1.psd",
@@ -433,20 +434,21 @@ const IMAGES = {
 };
 
 const PROJECTS = [
-  { title:"ទិវា​នារី​អន្តរជាតិ ",  cat:"Holiday Poster",   filter:"poster",     desc:"A cinematic concert poster series blending dark sci-fi aesthetics with bold typographic treatment and layered neon color grading.", imgKey:"project1_img", psdKey:"project1_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
-  { title:"ព្រះ​រាជ​ពិធី​បុណ្យ​ចម្រើន​ព្រះ​ជន្ម",  cat:"Holiday Poster",  filter:"holiday",      desc:"Full brand identity for an underground creative collective — logo system, color palette, and collateral with a minimal dark aesthetic.", imgKey:"project2_img", psdKey:"project2_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" },
-  { title:"Blueberry Drink",cat:"Poster Design",   filter:"poster",     desc:"Event poster for an underground electronic music night. Red and black palette with experimental typographic layout and distorted grid elements.", imgKey:"project3_img", psdKey:"project3_psd", bg:"linear-gradient(160deg,#0d001a,#1a0000)", label:"CRIMSON\nFREQ." },
-  { title:"Car Poster",     cat:"Poster Design",      filter:"poster", desc:"Experimental typography poster exploring motion, tension, and rhythm through pure letterforms. Part of an ongoing personal type exploration series.", imgKey:"project4_img", psdKey:"project4_psd", bg:"#070707", label:"KINETIC\nTYPE" },
-  { title:"Coconut Cream Drink",   cat:"Poster Media",    filter:"poster",     desc:"Social media campaign kit for a streetwear drop — 12-piece set including feed posts, stories, and highlight covers with cohesive dark neon visual language.", imgKey:"project5_img", psdKey:"project5_psd", bg:"linear-gradient(180deg,#050510,#0a0a1a)", label:"PULSE\nCAMP." },
-  { title:"Coffee Brand",  cat:"Poster Design",  filter:"poster",      desc:"Brand identity system for a luxury photography studio — gold foil treatment concept, minimal wordmark, and full stationery suite.", imgKey:"project6_img", psdKey:"project6_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
-  { title:"Food Poster",    cat:"Poster Design",   filter:"poster",     desc:"A cinematic concert poster series blending dark sci-fi aesthetics with bold typographic treatment and layered neon color grading.", imgKey:"project7_img", psdKey:"project7_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
-  { title:"i_watch",  cat:"Poster Design",  filter:"product",      desc:"Full brand identity for an underground creative collective — logo system, color palette, and collateral with a minimal dark aesthetic.", imgKey:"project8_img", psdKey:"project8_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" },
-  { title:"ពិធី​បុណ្យ​ចូល​ឆ្នាំ​ថ្មី ប្រពៃណី​ជាតិ",     cat:"Holiday Poster",      filter:"holiday", desc:"Experimental typography poster exploring motion, tension, and rhythm through pure letterforms. Part of an ongoing personal type exploration series.", imgKey:"project9_img", psdKey:"project10psd", bg:"#070707", label:"KINETIC\nTYPE" },
-  { title:"Harrys Poster",   cat:"Poster Design",    filter:"product",     desc:"Social media campaign kit for a streetwear drop — 12-piece set including feed posts, stories, and highlight covers with cohesive dark neon visual language.", imgKey:"project11_img", psdKey:"project11_psd", bg:"linear-gradient(180deg,#050510,#0a0a1a)", label:"PULSE\nCAMP." },
-  { title:"ព្រះ​រាជ​ពិធី​បុណ្យ​ចម្រើន​ព្រះ​ជន្ម សម្តេច​ព្រះ​មហាក្សត្រី",  cat:"Holiday Poster",  filter:"holiday",      desc:"Brand identity system for a luxury photography studio — gold foil treatment concept, minimal wordmark, and full stationery suite.", imgKey:"project12_img", psdKey:"project12_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
-  { title:"មាឃបូជា",    cat:"Holiday Poster",   filter:"holiday",     desc:"A cinematic concert poster series blending dark sci-fi aesthetics with bold typographic treatment and layered neon color grading.", imgKey:"project13_img", psdKey:"project13_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
-  { title:"៧​កក្ដដា",  cat:"Holiday Poster",  filter:"holiday",      desc:"Full brand identity for an underground creative collective — logo system, color palette, and collateral with a minimal dark aesthetic.", imgKey:"project14_img", psdKey:"project14_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" },
-  ];
+  { title:"ទិវា​នារី​អន្តរជាតិ ",  cat:"Holiday Poster",   filter:"poster",     desc:"ទិវានារីអន្តរជាតិ (ភាសាអង់គ្លេស International Women's Day: IWD) ប្រារព្ធ​ធ្វើ​នៅ​ថ្ងៃ​ទី ៨ ខែ​មីនា ជារៀង​រាល់​ឆ្នាំ​។ វា​គឺ​ជា​ថ្ងៃ​ដ៏​មាន​សារៈ​សំខាន់​មួយ​​ ដែល​បាន​បង្ហាញ​ពី​ប្រវត្តិ​ដ៏​អង់​អាច​របស់​ស្ត្រីនៅ​លើ​ពិភព​លោក​។​​នារីនៅសម័យអាចបុរសបាន។", imgKey:"project1_img", psdKey:"project1_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
+  { title:"ព្រះ​រាជ​ពិធី​បុណ្យ​ចម្រើន​ព្រះ​ជន្ម",  cat:"Holiday Poster",  filter:"holiday",      desc:"សូមថ្វាយព្រះរាជសព្ទសាធុការពរ បវរមហាប្រសើរ នៅក្នុងឱកាសដ៏មហានក្ខត្តប្ញក្ស នៃព្រះរាជពិធីបុណ្យចំរើនព្រះជន្ម ព្រះករុណាព្រះបាទសម្តេច ព្រះបរមនាថ នរោត្តម សីហមុនី ព្រះមហាក្សត្រនៃព្រះរាជាណាចក្រកម្ពុជា ជាទីសក្ការៈដ៏ខ្ពង់ខ្ពស់បំផុត។", imgKey:"project2_img", psdKey:"project2_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" },
+  { title:"Blueberry Drink",cat:"Poster Design",   filter:"poster",     desc:"Blueberry drink poster with a fresh, vibrant design that captures the essence of the beverage.", imgKey:"project3_img", psdKey:"project3_psd", bg:"linear-gradient(160deg,#0d001a,#1a0000)", label:"CRIMSON\nFREQ." },
+  { title:"Car Poster",     cat:"Poster Design",      filter:"poster", desc:"Car poster for a local dealership. Bold typography and dynamic composition to highlight the vehicle's features.", imgKey:"project4_img", psdKey:"project4_psd", bg:"#070707", label:"KINETIC\nTYPE" },
+  { title:"Coconut Cream Drink",   cat:"Poster Media",    filter:"poster",     desc:"The best coconut cream drink. It can help you stay hydrated and refreshed.", imgKey:"project5_img", psdKey:"project5_psd", bg:"linear-gradient(180deg,#050510,#0a0a1a)", label:"PULSE\nCAMP." },
+  { title:"Coffee Brand",  cat:"Poster Design",  filter:"poster",      desc:"Coffee brand identity for a local cafe — minimalist logo, warm color palette, and custom packaging design.", imgKey:"project6_img", psdKey:"project6_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
+  { title:"Food Poster",    cat:"Poster Design",   filter:"poster",     desc:"Food poster for a local restaurant. Vibrant colors and appetizing imagery to showcase the menu.", imgKey:"project7_img", psdKey:"project7_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
+  { title:"i_watch",  cat:"Poster Design",  filter:"product",      desc:"The best watch. It can help you keep track of time.", imgKey:"project8_img", psdKey:"project8_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" },
+  { title:"ពិធី​បុណ្យ​ចូល​ឆ្នាំ​ថ្មី ប្រពៃណី​ជាតិ",     cat:"Holiday Poster",      filter:"holiday", desc:"បុណ្យចូលឆ្នាំខ្មែរ ជាបុណ្យប្រពៃណីជាតិដែលប្រជាជននៅក្នុងប្រទេសកម្ពុជាតែងតែប្រារព្ធធ្វើជារៀងរាល់ឆ្នាំ។", imgKey:"project9_img", psdKey:"project10psd", bg:"#070707", label:"KINETIC\nTYPE" },
+  { title:"Harrys Poster",   cat:"Poster Design",    filter:"product",     desc:"The best skin care. It can help you achieve healthy, glowing skin.", imgKey:"project11_img", psdKey:"project11_psd", bg:"linear-gradient(180deg,#050510,#0a0a1a)", label:"PULSE\nCAMP." },
+  { title:"ព្រះ​រាជ​ពិធី​បុណ្យ​ចម្រើន​ព្រះ​ជន្ម សម្តេច​ព្រះ​មហាក្សត្រី",  cat:"Holiday Poster",  filter:"holiday",      desc:"អបអរសាទរ ព្រះរាជពិធីបុណ្យចម្រើនព្រះជន្មសម្តេចព្រះមហាក្សត្រី នរោត្តម មុនីនាថ សីហនុ ព្រះវររាជមាតាជាតិខ្មែរក្នុងសេរីភាព សេចក្តីថ្លៃថ្នូរ និងសុភមង្គល ជាទីគោរពសក្ការៈដ៏ខ្ពង់ខ្ពស់​។", imgKey:"project12_img", psdKey:"project12_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
+  { title:"មាឃបូជា",    cat:"Holiday Poster",   filter:"holiday",     desc:"មាឃបូជា ជាពីធីបុណ្យមួយដែលមានសារៈសំខាន់នៅក្នុងព្រះពុទ្ធសាសនា ដែលរួមពិធីបុណ្យមាន: មាឃបូជា ពិសាខបូជា អាសាឍបូជា និងបុណ្យបវារណា (ចេញវស្សា) ។", imgKey:"project13_img", psdKey:"project13_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
+  { title:"៧​កក្ដដា",  cat:"Holiday Poster",  filter:"holiday",      desc:"ថ្ងៃ​៧ កក្កដា ទិវា​ប្រវត្ដិសាស្ដ្រ​នៃ​ការ​ចុះបញ្ជី​រមណីយដ្ឋាន​នៃប្រា​សាទ​ព្រះ​វិហារ​ខ្មែរ ចូល​ក្នុង​បញ្ជី​បេតិកភណ្ឌ​ពិភពលោក​នៃ​អ​ង្គ​ការ​យូ​ណេ​ស្កូ​គឺជា​កិច្ចការ​វប្បធម៌​សុទ្ធសាធ​។", imgKey:"project14_img", psdKey:"project14_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" },
+  { title:"ច្រត់នង្គ័រ",  cat:"Holiday Poster",  filter:"holiday",      desc:"ព្រះរាជពិធីនេះ គឺសំខាន់បំផុត បន្ទាប់ពីព្រះរាជាអភិសេក ដែលជាពិធីមួយស្ថិតក្នុងចំណោមពិធីផ្សេងៗ ជាច្រើនទៀតប្រចាំឆ្នាំ។ព្រះរាជពិធីប្រពៃណីនេះ ធ្វើឡើងក្នុងគោលបំណងផ្សងមើលប្រផ្នូលរបស់ស្រុកទេស ទៅតាមការបរិភោគរបស់ «គោឧសភរាជ»។ ម្យ៉ាងទៀតក៏ជាការដាស់តឿន ក្រើនរំឭកដល់ប្រជាជនខ្មែរ ដែលពឹងផ្អែកលើការធ្វើកសិកម្មជាចម្បងនោះ ឱ្យបានដឹងថា រដូវវស្សាបានចូលមកដល់ហើយ។", imgKey:"project15_img", psdKey:"project15_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" } 
+];
 
 const INFO = {
   name:      "Sreng Theanyang",
@@ -512,18 +514,18 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
-function doModalDownload() {
-  if (!currentPSD) {
-    showToast("No source file linked for this project yet.");
-    return;
-  }
-  var a = document.createElement("a");
-  a.href = currentPSD;
-  a.download = currentPSD.split("/").pop();
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
+// function doModalDownload() {
+//   if (!currentPSD) {
+//     showToast("No source file linked for this project yet.");
+//     return;
+//   }
+//   var a = document.createElement("a");
+//   a.href = currentPSD;
+//   a.download = currentPSD.split("/").pop();
+//   document.body.appendChild(a);
+//   a.click();
+//   document.body.removeChild(a);
+// }
 
 // click outside modal to close
 document.getElementById("modal").addEventListener("click", function(e) {
@@ -533,19 +535,19 @@ document.getElementById("modal").addEventListener("click", function(e) {
 // ============================================================
 // DOWNLOAD PSD FROM CARD
 // ============================================================
-function downloadPSD(card) {
-  var url = card.dataset.psd || "";
-  if (!url) {
-    showToast("No file linked for \"" + (card.dataset.title || "this project") + "\" yet.");
-    return;
-  }
-  var a = document.createElement("a");
-  a.href = url;
-  a.download = url.split("/").pop();
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
+// function downloadPSD(card) {
+//   var url = card.dataset.psd || "";
+//   if (!url) {
+//     showToast("No file linked for \"" + (card.dataset.title || "this project") + "\" yet.");
+//     return;
+//   }
+//   var a = document.createElement("a");
+//   a.href = url;
+//   a.download = url.split("/").pop();
+//   document.body.appendChild(a);
+//   a.click();
+//   document.body.removeChild(a);
+// }
 
 // ============================================================
 // CONTACT FORM
@@ -750,10 +752,10 @@ var observer = new IntersectionObserver(function(entries) {
             '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><circle cx="8" cy="8" r="3"/><path d="M1 8s2.5-5 7-5 7 5 7 5-2.5 5-7 5-7-5-7-5z"/></svg>' +
             ' View' +
           '</button>' +
-          '<button class="project-btn project-btn-dl" onclick="downloadPSD(this.closest(\'.project-card\'))">' +
-            '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M8 1v10M4 7l4 4 4-4M2 13h12"/></svg>' +
-            ' Download' +
-          '</button>' +
+          // '<button class="project-btn project-btn-dl" onclick="downloadPSD(this.closest(\'.project-card\'))">' +
+          //   '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><path d="M8 1v10M4 7l4 4 4-4M2 13h12"/></svg>' +
+          //   ' Download' +
+          // '</button>' +
         '</div>' +
       '</div>';
 
