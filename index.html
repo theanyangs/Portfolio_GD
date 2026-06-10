@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — Graphic Design</title>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -211,7 +212,6 @@
     <span>Adobe Photoshop</span><span class="dot">&#x2726;</span>
     <span>Illustrator</span><span class="dot">&#x2726;</span>
     <span>After Effects</span><span class="dot">&#x2726;</span>
-    <span>Cinema 4D</span><span class="dot">&#x2726;</span>
     <span>Poster Design</span><span class="dot">&#x2726;</span>
     <span>Brand Identity</span><span class="dot">&#x2726;</span>
     <span>Typography</span><span class="dot">&#x2726;</span>
@@ -220,7 +220,7 @@
     <span>Adobe Photoshop</span><span class="dot">&#x2726;</span>
     <span>Illustrator</span><span class="dot">&#x2726;</span>
     <span>After Effects</span><span class="dot">&#x2726;</span>
-    <span>Cinema 4D</span><span class="dot">&#x2726;</span>
+  
   </div>
 </div>
 
@@ -234,7 +234,6 @@
     <button class="filter-btn" data-filter="poster">Poster</button>
     <button class="filter-btn" data-filter="product">Product</button>
     <button class="filter-btn" data-filter="holiday">Holiday</button>
-    <button class="filter-btn" data-filter="social">Social Media</button>
   </div>
   <div class="projects-grid" id="projectsGrid"></div>
 </section>
@@ -322,16 +321,7 @@
       <div class="skill-level"><div class="skill-level-fill"></div></div>
     </div>
 
-    <div class="skill-item reveal" data-level="78">
-      <div class="skill-icon">
-        <svg viewBox="0 0 48 48" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-          <rect width="48" height="48" rx="8" fill="#001018"/>
-          <text x="24" y="30" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="14" fill="#01ADEF">C4D</text>
-        </svg>
-      </div>
-      <div class="skill-name">Cinema 4D</div>
-      <div class="skill-level"><div class="skill-level-fill"></div></div>
-    </div>
+   
 
   </div>
 </section>
@@ -421,24 +411,13 @@ const IMAGES = {
     project17_img: "images/gong cha poster.png",
     project18_img: "images/international child.png",
     project19_img: "images/koi.png",
-  // project1_psd: "8 women.psd",
-  // project2_psd: "ចម្រើន​ព្រះ​ជន្ម.psd",
-  //   project3_psd: "blue1.psd",
-  //   project4_psd: "car.psd",
-  //   project5_psd: "coconut cream.psd",
-  //   project6_psd: "drink1.psd",
-  //   project7_psd: "food1.psd",
-  //   project8_psd: "i watch.psd",
-  //   project9_psd: "khmer new year.psd",
-  //   project10_psd: "peace.psd",
-  //   project11_psd: "skin care.psd",
-  //   project12_psd: "ចម្រើន​ព្រះ​ជន្ម.psd",
-  //   project13_psd: "មាឃបូជា.psd",
-  //   project14_psd: "៧​កក្ដដា1.psd",
+    project20_img: "images/perfum.jpg",
+    project21_img: "images/food_2.jpg",
+    project22_img: "images/beer.jpg",
 };
 
 const PROJECTS = [
-  { title:"ទិវា​នារី​អន្តរជាតិ ",  cat:"Holiday Poster",   filter:"poster",     desc:"ទិវានារីអន្តរជាតិ (ភាសាអង់គ្លេស International Women's Day: IWD) ប្រារព្ធ​ធ្វើ​នៅ​ថ្ងៃ​ទី ៨ ខែ​មីនា ជារៀង​រាល់​ឆ្នាំ​។ វា​គឺ​ជា​ថ្ងៃ​ដ៏​មាន​សារៈ​សំខាន់​មួយ​​ ដែល​បាន​បង្ហាញ​ពី​ប្រវត្តិ​ដ៏​អង់​អាច​របស់​ស្ត្រីនៅ​លើ​ពិភព​លោក​។​​នារីនៅសម័យអាចបុរសបាន។", imgKey:"project1_img", psdKey:"project1_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
+  { title:"ទិវា​នារី​អន្តរជាតិ ",  cat:"Holiday Poster",   filter:"holiday",     desc:"ទិវានារីអន្តរជាតិ (ភាសាអង់គ្លេស International Women's Day: IWD) ប្រារព្ធ​ធ្វើ​នៅ​ថ្ងៃ​ទី ៨ ខែ​មីនា ជារៀង​រាល់​ឆ្នាំ​។ វា​គឺ​ជា​ថ្ងៃ​ដ៏​មាន​សារៈ​សំខាន់​មួយ​​ ដែល​បាន​បង្ហាញ​ពី​ប្រវត្តិ​ដ៏​អង់​អាច​របស់​ស្ត្រីនៅ​លើ​ពិភព​លោក​។​​នារីនៅសម័យអាចបុរសបាន។", imgKey:"project1_img", psdKey:"project1_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
   { title:"ព្រះ​រាជ​ពិធី​បុណ្យ​ចម្រើន​ព្រះ​ជន្ម",  cat:"Holiday Poster",  filter:"holiday",      desc:"សូមថ្វាយព្រះរាជសព្ទសាធុការពរ បវរមហាប្រសើរ នៅក្នុងឱកាសដ៏មហានក្ខត្តប្ញក្ស នៃព្រះរាជពិធីបុណ្យចំរើនព្រះជន្ម ព្រះករុណាព្រះបាទសម្តេច ព្រះបរមនាថ នរោត្តម សីហមុនី ព្រះមហាក្សត្រនៃព្រះរាជាណាចក្រកម្ពុជា ជាទីសក្ការៈដ៏ខ្ពង់ខ្ពស់បំផុត។", imgKey:"project2_img", psdKey:"project2_psd", bg:"#0a0a0a", label:"VOID\nCOLLECTIVE" },
   { title:"Blueberry Drink",cat:"Poster Design",   filter:"poster",     desc:"Blueberry drink poster with a fresh, vibrant design that captures the essence of the beverage.", imgKey:"project3_img", psdKey:"project3_psd", bg:"linear-gradient(160deg,#0d001a,#1a0000)", label:"CRIMSON\nFREQ." },
   { title:"Car Poster",     cat:"Poster Design",      filter:"poster", desc:"Car poster for a local dealership. Bold typography and dynamic composition to highlight the vehicle's features.", imgKey:"project4_img", psdKey:"project4_psd", bg:"#070707", label:"KINETIC\nTYPE" },
@@ -455,6 +434,9 @@ const PROJECTS = [
   { title:"Gong Cha Poster",  cat:"Poster Design",  filter:"poster",      desc:"The best Gong Cha poster for a local cafe — minimalist logo, warm color palette, and custom packaging design.", imgKey:"project17_img", psdKey:"project17_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
   { title:"ទិវាកុមារអន្តរជាតិ",  cat:"Holiday Poster",  filter:"holiday",      desc:"International Children's Day is a day to celebrate the rights and well-being of children around the world.", imgKey:"project18_img", psdKey:"project18_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
   { title:"Koi Poster",  cat:"Poster Design",  filter:"poster",      desc:"The best Koi poster for a local cafe — minimalist logo, warm color palette, and custom packaging design.", imgKey:"project19_img", psdKey:"project19_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
+  { title:"perfum",  cat:"Poster Design",  filter:"product",      desc:"The best perfume. It can help you feel confident and attractive.", imgKey:"project20_img", psdKey:"project20_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
+  { title:"Food",    cat:"Poster Design",   filter:"poster",     desc:"Food poster for a local restaurant. Vibrant colors and appetizing imagery to showcase the menu.", imgKey:"project21_img", psdKey:"project21_psd", bg:"linear-gradient(135deg,#0d0d0d,#1a0a2e,#0d0d0d)", label:"NEON\nDYSTOPIA" },
+  { title:"Beer",    cat:"Poster Design",   filter:"product",     desc:"Beer poster for a local brewery. Bold typography and dynamic composition to highlight the beverage's features.", imgKey:"project22_img", psdKey:"project22_psd", bg:"#0a0800", label:"AURELIUS\nSTUDIO" },
 ];
 
 const INFO = {
@@ -463,12 +445,12 @@ const INFO = {
   location:  "Phnom Penh, Cambodia",
   email:     "theanyangs123@gmail.com",
   phone:     "081 797 531",
-  bio1:      "My name is Sreng Theanyang, and I am 21 years old. I studied Management Information Systems at SETEC Institute and I am currently waiting for my official graduation.With my creative spirit, hard work, and self-confidence,",
+  bio1:      "My name is Sreng Theanyang, and I am 21 years old. I studied Management Information Systems at SETEC Institute and I am currently waiting for my official graduation.With my creative spirit, hard work, and self-confidence.",
   bio2:      "I believe that I have the ability to create and provide high-quality work and professional designs. I am always eager to learn new skills, improve myself, and contribute my best effort to every project and opportunity.",
   behance:   "yang",
-  dribbble:  "#",
-  instagram: "#",
-  linkedin:  "#",
+  facebook:  "https://www.facebook.com/share/1DwQhpv2wC/?mibextid=wwXIfr",
+  instagram: "https://www.instagram.com/hea.yang.165?igsh=MWs0c2Q0NWJza2s0bA%3D%3D&utm_source=qr",
+  telegram:  "https://t.me/theanyang",
 };
 
 // ============================================================
@@ -559,44 +541,58 @@ document.getElementById("modal").addEventListener("click", function(e) {
 // ============================================================
 // CONTACT FORM
 // ============================================================
-function handleSubmit() {
-  var btn  = document.getElementById("submitBtn");
-  var name = document.getElementById("f_name").value.trim();
-  var mail = document.getElementById("f_email").value.trim();
-  var subj = document.getElementById("f_subject").value.trim();
-  var msg  = document.getElementById("f_message").value.trim();
+async function handleSubmit() {
+  const name = document.getElementById("f_name").value.trim();
+  const email = document.getElementById("f_email").value.trim();
+  const subject = document.getElementById("f_subject").value.trim();
+  const message = document.getElementById("f_message").value.trim();
 
-  // clear highlights
-  ["f_name","f_email","f_subject","f_message"].forEach(function(id) {
-    document.getElementById(id).style.borderColor = "";
-  });
-
-  var valid = true;
-  if (!name) { document.getElementById("f_name").style.borderColor    = "var(--neon2)"; valid = false; }
-  if (!mail) { document.getElementById("f_email").style.borderColor   = "var(--neon2)"; valid = false; }
-  if (!subj) { document.getElementById("f_subject").style.borderColor = "var(--neon2)"; valid = false; }
-  if (!msg)  { document.getElementById("f_message").style.borderColor = "var(--neon2)"; valid = false; }
-
-  if (!valid) {
-    showToast("Please fill in all fields.");
+  if (!name || !email || !subject || !message) {
+    alert("Please fill in all fields.");
     return;
   }
 
-  var body = "From: " + name + " <" + mail + ">\n\n" + msg;
-  window.location.href = "mailto:" + INFO.email
-    + "?subject=" + encodeURIComponent(subj)
-    + "&body="    + encodeURIComponent(body);
+  const text = `
+📩 New Portfolio Message
 
-  btn.textContent = "Message Sent \u2713";
-  btn.style.background = "#00cc99";
-  document.getElementById("f_name").value    = "";
-  document.getElementById("f_email").value   = "";
-  document.getElementById("f_subject").value = "";
-  document.getElementById("f_message").value = "";
-  setTimeout(function() {
-    btn.textContent = "Send Message \u2192";
-    btn.style.background = "";
-  }, 4000);
+👤 Name: ${name}
+📧 Email: ${email}
+📌 Subject: ${subject}
+
+💬 Message:
+${message}
+`;
+
+  const BOT_TOKEN = "8690784272:AAFFfmg4uCItYdc2SiXon0vW9zPyskBopcI";
+  const CHAT_ID = "@mybotstev";
+
+  try {
+    const response = await fetch(
+      `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: text
+        })
+      }
+    );
+
+    const data = await response.json();
+    console.log(data);
+
+    if (data.ok) {
+      alert("Message sent successfully!");
+    } else {
+      alert("Telegram error: " + data.description);
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error sending message.");
+  }
 }
 
 // ============================================================
@@ -712,11 +708,14 @@ var observer = new IntersectionObserver(function(entries) {
 
   // Social links
   var socials = [
-    { key:"behance",   label:"Be" },
-    { key:"dribbble",  label:"Dr" },
-    { key:"instagram", label:"Ig" },
-    { key:"linkedin",  label:"Li" },
-  ];
+  { key: "facebook", label: "Fb" },
+  { key: "telegram", label: "Te" },
+  { key: "instagram", label: "Ig" },
+];
+
+socials.forEach(social => {
+  console.log(INFO[social.key]);
+});
   var wrap = document.getElementById("socialLinks");
   socials.forEach(function(s) {
     var a = document.createElement("a");
